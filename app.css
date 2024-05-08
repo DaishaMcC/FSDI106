@@ -1,0 +1,15 @@
+body {
+    
+}
+
+h1 {
+    color: azure;
+    background-color: black;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
