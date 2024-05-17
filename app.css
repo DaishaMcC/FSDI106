@@ -1,13 +1,15 @@
-body {
-
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monserrat', 'sans-serif';
 }
 
 .task{
     margin: 10px 20px;
     border: 2px solid #333;
 }
-
-h1 {
+h1{ 
     color: azure;
     background-color: black;
     text-align: center;
@@ -15,6 +17,75 @@ h1 {
 
 main {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 90px);
+    background: linear-gradient(to bottom, #ffecd9, #fff5ec);
 }
 
+#list {
+    background-color: aquamarine;
+    flex: 2;
+    padding: 20px;
+    border-right: 1px solid #ffdbc9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+#form {
+    background-color: antiquewhite;
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+/* form styling */
+#form input[type="text"],
+#form textarea,
+#form select,
+#form input[type="datetime-local"],
+#form input[type="number"] {
+    width: 100;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ffdbc9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+    color: #8b4513;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* submit button */
+#form button[type="submit"] {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#form button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+#list {
+    animation: shimmer 2s infinite alternate;
+    background: linear-gradient(to right, #fff0e6 8%, #ffecd9 18%, #fff0e6 33%);
+    background-size: 100px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
