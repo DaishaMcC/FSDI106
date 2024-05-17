@@ -65,8 +65,6 @@ function loadTask() {
                 {
                     displayTask(task);
                 }
-
-                displayTask() 
             }
             displayTasks(data);
             console.log(res);
